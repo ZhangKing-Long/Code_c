@@ -246,7 +246,6 @@ int DetectGame(char Board[row][col], int r, int c)
 }
 
 
-//this is a test again
 
 
 
