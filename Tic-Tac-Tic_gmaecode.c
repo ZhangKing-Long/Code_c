@@ -245,6 +245,7 @@ int DetectGame(char Board[row][col], int r, int c)
     return flag;
 }
 
+//this is git test
 
 
 
