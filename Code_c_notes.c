@@ -483,27 +483,91 @@ int main()
 //    return 0;
 //}
 
-//结构体
-struct stu
-{
-    char name[10];
-    int age;
-    char gender[4];
-};
+////结构体
+//struct stu
+//{
+//    char name[10];
+//    int age;
+//    char gender[4];
+//};
+//相当于创建一个 int
+//
+//typedef struct stu
+//{
+//    char name[10];
+//    int age;
+//    char gender[4];
+//}Stu;
+//声明结构体时省略结构体标签得到匿名结构体
+//struct
+//{
+//    char name[4];
+//    int age;
+//}s1;
+//匿名结构体只能使用一次
+//int main()
+//{
+//    char a = -1;
+//    signed char b = -1;
+//    unsigned char c = -1;
+//    printf("%d\n",a);
+//    printf("%d\n",b);
+//    printf("%d\n",c);
+//    return 0;
+//}
 
-typedef struct stu
-{
-    char name[10];
-    int age;
-    char gender[4];
-}Stu;
+////指针数组 是数组
+//int* arr1[];
+//char* arr2[];
+//
+////数组指针 是指针
+//int (*p)[];
+//char (*p)[];
 
-int main()
-{
-    struct stu s;
-    return 0;
-}
-
+////再一次讨论数组名
+//int  main()
+//{
+//    int arr[10] = {0};
+//    printf("%p\n",arr);         //000000000061FDF0
+//    printf("%p\n",&arr[0]);     //000000000061FDF0
+//    printf("%p\n",&arr);        //000000000061FDF0
+//    //数组名通常表示的都是数组首元素地址，但是有两个例外
+//    //1、sizeof(数组名) 计算的是整个数组的大小
+//    //2、&数组名 取地址取的是整个数组的地址
+//    printf("%p\n",arr+1);       //000000000061FDF4 相比于000000000061FDF0跳跃一个元素地址
+//    printf("%p\n",&arr+1);      //000000000061FE18 相比于000000000061FDF0跳跃了整个数组的地址
+//    int len = sizeof(arr);
+//    printf("%d\n",len);         //计算的是整个数组的长度，单位是字节
+//    return 0;
+//}
+//
+//void* my_memcpy(void* dest, const void* src, int num)
+//{
+//    void* ret=dest;
+//    for(int i=0; i<num; i++)
+//    {
+//        *(char*)dest=*(char*)src;
+//        dest=(char*)dest +1;
+//        src=(char*)src +1;
+//    }
+//    return ret;
+//}
+//
+//void* my_memmove(void* dest, const void* src, int num)
+//{
+//
+//}
+//
+//int main()
+//{
+//    char dest[]="suijiceshi";
+//    char src[]="hello";
+//    my_memcpy(dest, src, 5);
+//    int l=sizeof(dest);
+//    printf("%s",dest);
+//    printf("\n");
+//    return 0;
+//}
 
 
 
